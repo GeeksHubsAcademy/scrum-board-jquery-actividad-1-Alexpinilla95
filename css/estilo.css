@@ -11,6 +11,7 @@
 body {
     background-color: black;
     background-image: url(images/oscuro.jpg);
+    background-attachment: fixed;
     color: white;
 }
 
@@ -18,36 +19,35 @@ header {
     margin-top: 15px;
     width: 70%;
     height: 100px;
-    position: fixed;
     margin-left: 15%;
     margin-right: 15%;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 18px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 .logo {
 width: 30vh;
 height: 40px;
 }
 
-header input {
-    width: 30vh;
-    height: 40px;
+
+.Lista1 input {
+    margin: auto; 
     background: transparent;
     border-color: rgb(147, 255, 219);
     border-top-width: 0px;
     border-bottom-width: 2px;
     border-right-width: 0px;
     border-left-width: 0px;
+    
     box-shadow: none;
     outline: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding-top: 10px;
+
     color: rgb(147, 255, 219);
-    -webkit-transform: translate(-50%, -50%);
+
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearence: none;
@@ -55,14 +55,14 @@ header input {
     appearance: none;
     font-size: 19px;
     font-weight: 400;
-    text-indent: 5px;
+    text-align: center;
 }
 
 header ::-webkit-input-placeholder {
     color: rgb(147, 255, 219, 0.75);
 }
 
-header button {
+/*header button {
     width: 33px;
     height: 33px;
     z-index: 2;
@@ -78,7 +78,7 @@ header button {
     -ms-appearence: none;
     -o-appearance: none;
     appearance: none;
-}
+}*/
 
 ul.nuevaLista {
     width: 100%;
@@ -118,23 +118,24 @@ ul.nuevaLista2 li {
 }
 
 .contenedor1 {
-    margin-top: 130px;
+    display:flex;
+    flex-direction:column;
+    margin-top: 15px;
     width: 22%;
-    position: fixed;
     margin-left: 15%;
     margin-right: 15%;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 18px;
     padding: 20px 20px 20px 20px;
-}
+} 
 .contenedor1 h4{
     padding-bottom:20px;
     text-align:Center;
     color:    #93ffdb;
 
 }
-.pelotudo{
+.titulo{
     margin-top: 20px;
     padding-bottom:5px;
     padding-top: 20px;

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var primeraLista = $('.Lista1 input');
+    let primeraLista = $('.Lista1 input');
     const generadorId = generador1 => `${generador1}-${Date.now()}-${Math.ceil(Math.random()*100)}`
     const crearLista = titulo1 =>
         `
@@ -17,9 +17,9 @@ $(document).ready(function () {
                     <script>
         
                     $('#mas').on('click', function(){
-                        var texto2 = $('.subTarea').val ();
-                        $('.nuevaLista').append('<li class="list2" id="${generadorId('list2')}">' + '<span class="pelotudo">' + texto2 + '</span>' + 
-                        '<button class="eliminar"><img src="css/images/menos.png">' + '</button>' +
+                        let texto2 = $('.subTarea').val ();
+                        $('.nuevaLista').append('<li class="list2" id="${generadorId('list2')}">' + '<span class="titulo">' + texto2 + '</span>' + 
+                        '<button class="eli"><img src="css/images/menos.png">' + '</button>' +
                         '<button class="editar"><img src="css/images/editar.png">' + '</button>' +            
                         
                         '</li>');
@@ -34,18 +34,24 @@ $(document).ready(function () {
 
 
                     </button>
+                    
                     <script>
                     $('.subTarea').keypress(function(introo) {
                         if(introo.which == 13) {
-                            var texto2 = $('.subTarea').val ();
-                            $('.nuevaLista').append('<li class="list2" id="${generadorId('list2')}">' + '<span class="pelotudo">' + texto2 + '</span>' + 
-                            '<button class="eliminar"><img src="css/images/menos.png">' + '</button>' +
+                            let texto2 = $('.subTarea').val ();
+                            $('.nuevaLista').append('<li class="list2" id="${generadorId('list2')}">' + '<span class="titulo">' + texto2 + '</span>' + 
+                            '<button class="eli"><img src="css/images/menos.png">' + '</button>' +
                             '<button class="editar"><img src="css/images/editar.png">' + '</button>' +            
                             
                             '</li>');
-                            $('.subTarea').val("");                        }
+                            $('.subTarea').val("");                       
+                            }
                     });
                     </script>
+
+        
+
+                </ul>
             </div>
         </div>
         
@@ -72,6 +78,13 @@ $(document).ready(function () {
         listNode.detach();
     })
 
+    /*$('.eliminar').on('click', function () {
+        alert('hola');
+
+    }) */
+    $( ".eli" ).click(function() {
+        alert( "probando" );
+      });
 })
 
 
